@@ -1,0 +1,43 @@
+.tags{
+    display: grid;
+     background-color: var(--primaryDark-200);
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap:0.4rem;
+    padding: 12px;
+    border-radius: 12px;
+    width: fit-content;
+}
+.tag_dog{
+    background-color: var(--grey-100);
+    display: inline-block;
+    width: 100px;
+    height: 40px;
+    border-radius: 12px;
+     text-align:center;
+    color:var(--primaryDark-900);
+     transition: all 0.3s ease-in-out;
+
+
+
+        
+}
+.tag_dog:hover{
+    cursor: pointer;
+    color: #fff;
+    background-color:var(--primary-color) ;
+}
+.head{
+    color: var(--grey-A100);
+    font-weight: 800;
+    font-size: 23px;
+    margin: 12px;
+}
+.tag_name{
+    margin-top: 5px;
+    font-weight: 900;
+}
+.headtag{
+    width: 70%;
+    position: relative;
+    left:3em
+}

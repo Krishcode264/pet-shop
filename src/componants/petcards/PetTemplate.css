@@ -1,0 +1,31 @@
+.animal_template{
+    width: 70%;
+    height: 600px;
+    position: relative;
+    left: 15%;
+    overflow: hidden;
+    display: flex;
+    border-radius: 16px;
+  
+  
+  }
+  .animal_photos{
+    min-width: 600px;
+  }
+  .animal_photos img{
+    /* set the height of the image to 100% of the container */
+    object-fit: cover; /* resize the image to cover the container */
+    object-position: center;
+    width: 100%;
+    height: 100%; /* center the image within the container */
+  
+  }
+  .animal_componant{
+    width: 100%;
+    height: 100%;
+  }
+  .animal_info{
+    width:100%;
+    background-color: var(--primaryDark-800);
+  }
+  

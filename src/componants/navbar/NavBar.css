@@ -1,0 +1,33 @@
+.right_nav{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 60%;
+  
+
+  }
+
+  .main_nav{
+    display: flex;
+    justify-content: space-between;
+    background-color:var(--primaryDark-800);
+    padding: 13px;
+    border-radius: 8px;
+    position:fixed;
+  top: 0px;
+  left: 0;
+    width: 100%;
+    padding: 14px;
+    z-index: 1;
+   
+    
+  }
+  .auth_btns{
+    display: flex;
+  width: 40%;
+
+    justify-content:flex-end;
+  
+  }
+
+ 

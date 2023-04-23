@@ -1,0 +1,25 @@
+span{
+    display: inline-block;
+}
+.pethead{
+    font-weight: 900;
+    letter-spacing: 1.5px;
+}
+.top_nav{
+   max-width:60%;
+    display: flex;
+    justify-content: space-between;
+   
+    
+}
+
+.logo{
+    width: 60px;
+    animation: ring_rotate 2s linear infinite;
+}
+
+@keyframes ring_rotate {
+    to{
+        transform: rotate(360deg);
+    }
+}

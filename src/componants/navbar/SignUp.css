@@ -1,0 +1,25 @@
+.sign_up_btn{
+
+    padding: 8px;
+    border-radius: 7px;
+    background-color: #1be375b5;
+    color:var(--grey-50);
+    transition: all 0.3s ease-in-out;
+    outline: none;
+    border: none;
+    position: relative;
+    top: -30px;
+    width: 80px;
+    margin-left: 20px;
+
+    
+
+  
+}
+.sign_up_btn:hover{
+   transform: scale(1.1);
+ 
+}
+.searchicon{
+    color: white;
+}

@@ -1,0 +1,43 @@
+input{
+    width: 90%;
+    height:90%;
+    font-size: 1.3em;
+    outline: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    background-color:  var(--Primary-color);
+  
+  }
+
+  .input_parent{
+  display: flex;
+  width: 150px;
+  height: 40px;
+  margin-left: 20px;
+  align-items: center;
+  transition: all 0.4s ease-in-out;
+  background-color: var(--Primary-color);
+  border-radius: 12px;
+  padding: 8px;
+  box-shadow: 0px 0.3px 1px 0px white ;
+
+    
+  }
+  .input_parent:hover{
+    cursor: pointer;
+  }
+
+  .searchinput{
+    width: 80%;
+    border-radius: 11px;
+    margin-right: 5px;
+  }
+  
+  @media (min-width:768px) {
+  .input_parent{
+    width: 300px;
+    height: 50px;
+  }
+
+  }

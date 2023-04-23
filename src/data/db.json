@@ -1,0 +1,570 @@
+{
+  "pets": [
+    {
+      "id": "p001",
+      "name": "Fluffy",
+      "price": 500,
+      "image_url": "https://example.com/pet_images/fluffy.jpg",
+      "tags": [
+        "#cute",
+        "#fluffy",
+        "#happy"
+      ],
+      "owner": {
+        "name": "John Smith",
+        "address": "123 Main St, Anytown USA"
+      },
+      "gender": "female",
+      "breed": "Persian cat",
+      "age": 2
+    },
+    {
+      "id": "p002",
+      "name": "Buddy",
+      "price": 300,
+      "image_url": "https://example.com/pet_images/buddy.jpg",
+      "tags": [
+        "#happy",
+        "#loyal",
+        "#dog"
+      ],
+      "owner": {
+        "name": "Jane Doe",
+        "address": "456 Oak Ave, Anytown USA"
+      },
+      "gender": "male",
+      "breed": "Golden Retriever",
+      "age": 3
+    },
+    {
+      "id": "p003",
+      "name": "Socks",
+      "price": 50,
+      "image_url": "https://example.com/pet_images/socks.jpg",
+      "tags": [
+        "#cute",
+        "#small",
+        "#cat"
+      ],
+      "owner": {
+        "name": "Bob Johnson",
+        "address": "789 Elm St, Anytown USA"
+      },
+      "gender": "female",
+      "breed": "Domestic shorthair",
+      "age": 1
+    },
+    {
+      "id": "p004",
+      "name": "Max",
+      "price": 400,
+      "image_url": "https://example.com/pet_images/max.jpg",
+      "tags": [
+        "#happy",
+        "#loyal",
+        "#dog"
+      ],
+      "owner": {
+        "name": "Alice Green",
+        "address": "321 Maple Ave, Anytown USA"
+      },
+      "gender": "male",
+      "breed": "German Shepherd",
+      "age": 2
+    },
+    {
+      "id": "p005",
+      "name": "Luna",
+      "price": 200,
+      "image_url": "https://example.com/pet_images/luna.jpg",
+      "tags": [
+        "#cute",
+        "#fluffy",
+        "#happy"
+      ],
+      "owner": {
+        "name": "Chris Lee",
+        "address": "456 Oak Ave, Anytown USA"
+      },
+      "gender": "female",
+      "breed": "Ragdoll",
+      "age": 1
+    },
+    {
+      "id": "p006",
+      "name": "Rocky",
+      "price": 350,
+      "image_url": "https://example.com/pet_images/rocky.jpg",
+      "tags": [
+        "#active",
+        "#playful",
+        "#dog"
+      ],
+      "owner": {
+        "name": "Emily Brown",
+        "address": "789 Elm St, Anytown USA"
+      },
+      "gender": "male",
+      "breed": "Boxer",
+      "age": 4
+    },
+    {
+      "id": "p007",
+      "name": "Mittens",
+      "price": 75,
+      "image_url": "https://example.com/pet_images/mittens.jpg",
+      "tags": [
+        "#cute",
+        "#soft",
+        "#cat"
+      ],
+      "owner": {
+        "name": "lola",
+        "address": "120 yer downtown"
+      },
+      "gender": "male",
+      "breed": "naive",
+      "age": 2
+    },
+    {
+      "id": "p008",
+      "name": "Daisy",
+      "price": 250,
+      "image_url": "https://example.com/pet_images/daisy.jpg",
+      "tags": [
+        "#cute",
+        "#fluffy",
+        "#happy",
+        "#cat"
+      ],
+      "owner": {
+        "name": "Erica Davis",
+        "address": "123 Main St, Anytown USA"
+      },
+      "gender": "female",
+      "breed": "Himalayan",
+      "age": 1
+    },
+    {
+      "id": "p009",
+      "name": "Baxter",
+      "price": 500,
+      "image_url": "https://example.com/pet_images/baxter.jpg",
+      "tags": [
+        "#loyal",
+        "#cute",
+        "#happy",
+        "#dog"
+      ],
+      "owner": {
+        "name": "Joseph Kim",
+        "address": "456 Oak Ave, Anytown USA"
+      },
+      "gender": "male",
+      "breed": "Labrador Retriever",
+      "age": 2
+    },
+    {
+      "id": "p010",
+      "name": "Tux",
+      "price": 100,
+      "image_url": "https://example.com/pet_images/tux.jpg",
+      "tags": [
+        "#cute",
+        "#cat"
+      ],
+      "owner": {
+        "name": "Samantha Lee",
+        "address": "789 Elm St, Anytown USA"
+      },
+      "gender": "male",
+      "breed": "Domestic shorthair",
+      "age": 3
+    },
+    {
+      "id": "p011",
+      "name": "Lola",
+      "price": 300,
+      "image_url": "https://example.com/pet_images/lola.jpg",
+      "tags": [
+        "#cute",
+        "#happy",
+        "#fluffy",
+        "#dog"
+      ],
+      "owner": {
+        "name": "Amy Chen",
+        "address": "321 Maple Ave, Anytown USA"
+      },
+      "gender": "female",
+      "breed": "Poodle",
+      "age": 4
+    },
+    {
+      "id": "p012",
+      "name": "Simba",
+      "price": 150,
+      "image_url": "https://example.com/pet_images/simba.jpg",
+      "tags": [
+        "#cute",
+        "#happy",
+        "#cat"
+      ],
+      "owner": {
+        "name": "David Wong",
+        "address": "123 Main St, Anytown USA"
+      },
+      "gender": "male",
+      "breed": "Persian",
+      "age": 2
+    },
+    {
+      "id": "p013",
+      "name": "Coco",
+      "price": 450,
+      "image_url": "https://example.com/pet_images/coco.jpg",
+      "tags": [
+        "#happy",
+        "#loyal",
+        "#dog"
+      ],
+      "owner": {
+        "name": "Natalie Martinez",
+        "address": "456 Oak Ave, Anytown USA"
+      },
+      "gender": "female",
+      "breed": "French Bulldog",
+      "age": 1
+    },
+    {
+      "id": "p014",
+      "name": "Snickers",
+      "price": 100,
+      "image_url": "https://example.com/pet_images/snickers.jpg",
+      "tags": [
+        "#cute",
+        "#happy",
+        "#cat"
+      ],
+      "owner": {
+        "name": "Rachel Kim",
+        "address": "789 Elm St, Anytown USA"
+      },
+      "gender": "male",
+      "breed": "Siamese",
+      "age": 3
+    },
+    {
+      "id": "p015",
+      "name": "Milo",
+      "price": 200,
+      "image_url": "https://example.com/pet_images/milo.jpg",
+      "tags": [
+        "#loyal",
+        "#dog"
+      ],
+      "owner": {
+        "name": "Sarah Lee",
+        "address": "123 Main St, Anytown USA"
+      },
+      "gender": "male",
+      "breed": "Golden Retriever",
+      "age": 2
+    },
+    {
+      "id": "p016",
+      "name": "Tiger",
+      "price": 75,
+      "image_url": "https://example.com/pet_images/tiger.jpg",
+      "tags": [
+        "#cute",
+        "#happy",
+        "#cat"
+      ],
+      "owner": {
+        "name": "Jason Rodriguez",
+        "address": "456 Oak Ave, Anytown USA"
+      },
+      "gender": "male",
+      "breed": "Domestic shorthair",
+      "age": 4
+    },
+    {
+      "id": "p017",
+      "name": "Bailey",
+      "price": 400,
+      "image_url": "https://example.com/pet_images/bailey.jpg",
+      "tags": [
+        "#cute",
+        "#loyal",
+        "#happy",
+        "#dog"
+      ],
+      "owner": {
+        "name": "Olivia Davis",
+        "address": "789 Elm St, Anytown USA"
+      },
+      "gender": "female",
+      "breed": "German Shepherd",
+      "age": 1
+    },
+    {
+      "id": "p018",
+      "name": "Luna",
+      "price": 300,
+      "image_url": "https://example.com/pet_images/luna.jpg",
+      "tags": [
+        "#cute",
+        "#happy",
+        "#cat"
+      ],
+      "owner": {
+        "name": "Isabella Kim",
+        "address": "123 Main St, Anytown USA"
+      },
+      "gender": "female",
+      "breed": "Siamese",
+      "age": 2
+    },
+    {
+      "id": "p019",
+      "name": "Rocky",
+      "price": 250,
+      "image_url": "https://example.com/pet_images/rocky.jpg",
+      "tags": [
+        "#loyal",
+        "#happy",
+        "#dog",
+        "#young"
+      ],
+      "owner": {
+        "name": "Emma Wilson",
+        "address": "456 Oak Ave, Anytown USA"
+      },
+      "gender": "male",
+      "breed": "Labrador Retriever",
+      "age": 1
+    },
+    {
+      "id": "p020",
+      "name": "Simba",
+      "price": 150,
+      "image_url": "https://example.com/pet_images/simba.jpg",
+      "tags": [
+        "#cute",
+        "#happy",
+        "#cat",
+        "#baby"
+      ],
+      "owner": {
+        "name": "Sophia Johnson",
+        "address": "789 Elm St, Anytown USA"
+      },
+      "gender": "male",
+      "breed": "Persian",
+      "age": 0.5
+    },
+    {
+      "id": "p021",
+      "name": "Charlie",
+      "price": 350,
+      "image_url": "https://example.com/pet_images/charlie.jpg",
+      "tags": [
+        "#loyal",
+        "#happy",
+        "#dog"
+      ],
+      "owner": {
+        "name": "Ava Martinez",
+        "address": "123 Main St, Anytown USA"
+      },
+      "gender": "male",
+      "breed": "Poodle",
+      "age": 2
+    },
+    {
+      "id": "p022",
+      "name": "Bella",
+      "price": 400,
+      "image_url": "https://example.com/pet_images/bella.jpg",
+      "tags": [
+        "#cute",
+        "#happy",
+        "#dog"
+      ],
+      "owner": {
+        "name": "Mia Kim",
+        "address": "456 Oak Ave, Anytown USA"
+      },
+      "gender": "female",
+      "breed": "Golden Retriever",
+      "age": 1
+    },
+    {
+      "id": "p023",
+      "name": "Lucky",
+      "price": 100,
+      "image_url": "https://example.com/pet_images/lucky.jpg",
+      "tags": [
+        "#cute",
+        "#happy",
+        "#cat",
+        "#baby"
+      ],
+      "owner": {
+        "name": "Charlotte Rodriguez",
+        "address": "789 Elm St, Anytown USA"
+      },
+      "gender": "male",
+      "breed": "Siamese",
+      "age": 0.5
+    },
+    {
+      "id": "p024",
+      "name": "Max",
+      "price": 300,
+      "image_url": "https://example.com/pet_images/max.jpg",
+      "tags": [
+        "#loyal",
+        "#happy",
+        "#dog"
+      ],
+      "owner": {
+        "name": "Amelia Davis",
+        "address": "123 Main St, Anytown USA"
+      },
+      "gender": "male",
+      "breed": "German Shepherd",
+      "age": 2
+    },
+    {
+      "id": "p025",
+      "name": "Buddy",
+      "price": 200,
+      "image_url": "https://example.com/pet_images/buddy.jpg",
+      "tags": [
+        "#loyal",
+        "#happy",
+        "#dog"
+      ],
+      "owner": {
+        "name": "Olivia Brown",
+        "address": "789 Elm St, Anytown USA"
+      },
+      "gender": "male",
+      "breed": "Beagle",
+      "age": 2
+    },
+    {
+      "id": "p026",
+      "name": "Fluffy",
+      "price": 250,
+      "image_url": "https://example.com/pet_images/fluffy.jpg",
+      "tags": [
+        "#cute",
+        "#happy",
+        "#cat",
+        "#young"
+      ],
+      "owner": {
+        "name": "Sophia Johnson",
+        "address": "456 Oak Ave, Anytown USA"
+      },
+      "gender": "female",
+      "breed": "Persian",
+      "age": 1
+    },
+    {
+      "id": "p027",
+      "name": "Cooper",
+      "price": 350,
+      "image_url": "https://example.com/pet_images/cooper.jpg",
+      "tags": [
+        "#loyal",
+        "#happy",
+        "#dog"
+      ],
+      "owner": {
+        "name": "Ava Martinez",
+        "address": "789 Elm St, Anytown USA"
+      },
+      "gender": "male",
+      "breed": "Golden Retriever",
+      "age": 2
+    },
+    {
+      "id": "p028",
+      "name": "Tigger",
+      "price": 100,
+      "image_url": "https://example.com/pet_images/tigger.jpg",
+      "tags": [
+        "#cute",
+        "#happy",
+        "#cat",
+        "#baby"
+      ],
+      "owner": {
+        "name": "Charlotte Rodriguez",
+        "address": "123 Main St, Anytown USA"
+      },
+      "gender": "male",
+      "breed": "Siamese",
+      "age": 0.5
+    },
+    {
+      "id": "p029",
+      "name": "Roxy",
+      "price": 300,
+      "image_url": "https://example.com/pet_images/roxy.jpg",
+      "tags": [
+        "#loyal",
+        "#happy",
+        "#dog"
+      ],
+      "owner": {
+        "name": "Amelia Davis",
+        "address": "456 Oak Ave, Anytown USA"
+      },
+      "gender": "female",
+      "breed": "Labrador Retriever",
+      "age": 1
+    },
+    {
+      "id": "p030",
+      "name": "Toby",
+      "price": 200,
+      "image_url": "https://example.com/pet_images/toby.jpg",
+      "tags": [
+        "#loyal",
+        "#happy",
+        "#dog",
+        "#old"
+      ],
+      "owner": {
+        "name": "Olivia Brown",
+        "address": "789 Elm St, Anytown USA"
+      },
+      "gender": "male",
+      "breed": "Beagle",
+      "age": 6
+    },
+    {
+      "id": "p031",
+      "name": "Luna",
+      "price": 400,
+      "image_url": "https://example.com/pet_images/luna.jpg",
+      "tags": [
+        "#cute",
+        "#happy",
+        "#dog"
+      ],
+      "owner": {
+        "name": "Sophia Johnson",
+        "address": "123 Main St, Anytown USA"
+      },
+      "gender": "female",
+      "breed": "Golden Retriever",
+      "age": 1
+    }
+  ]
+}

@@ -1,0 +1,111 @@
+
+.pet_card{
+background-color: var(--primaryDark-900);
+border-radius: 16px;
+box-shadow: -5px 4px 16px  ;
+transition: all 0.3s ease-in-out;
+padding: 8px;
+width: 30%;
+height: 20%;
+margin: 0px 18px;
+filter: brightness(0.7);
+
+}
+.pet_image {
+  border-radius:4px;
+
+}
+
+.pet_card:hover{
+transform:scale(1.1,1.1);
+box-shadow:5px 19px 15px black;
+filter: brightness(1);
+
+}
+
+.pet_name{
+  text-align: center;
+   font-weight: 800;
+   font-size: 20px;
+   margin-top: 8px;
+   color: var(--grey-50);
+}
+.pet_gender_likes_div{
+  display: flex;
+  padding: 8px;
+  margin-top: 10px;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.unliked_icon{
+transition: all 0.5s ease;
+color: white;
+
+}
+.unliked_icon:hover{
+cursor: pointer;
+transform: scale(1.2);
+
+}
+.gender_price_rapper{
+  display: flex;
+  flex-direction: column;
+}
+.pet_gender{
+
+  background-color:var(--primaryDark-300);
+  border-radius: 9px;
+  width: fit-content;
+  padding: 8px;
+  text-align: center;
+   
+  color: white;
+}
+
+.pet_price{
+  width: 95%;
+  padding: 3px;
+  border-radius: 12px;
+  color: var(--grey-50);
+  font-weight: 700;
+  letter-spacing: 1.4px;
+  background-color: var(--primaryDark-300);
+  display: flex;
+  justify-content: center;
+}
+
+
+.addto_wish{
+  border-radius: 8px;
+  background-color: rgb(146, 146, 16);
+  height:fit-content;
+  font-size: 18px;
+  padding: 4px;
+  position: relative;
+  bottom: 12px;
+
+}
+.addto_wish:hover{
+  background-color: yellow;
+}
+
+
+@media (max-width: 580px) {
+.pet_card{
+  min-width:60% ;
+}
+
+
+  }
+  @media (min-width: 581px  ) and (max-width:1004px) {
+    /* CSS styles */
+    .pet_card{
+      min-width: 30%;
+    }
+  }
+  @media  (min-width:1205px) {
+    /* CSS styles */
+    .pet_card{
+      min-width: 20%;
+    }
+  }

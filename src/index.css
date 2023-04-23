@@ -1,13 +1,138 @@
-body {
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+/*
+  2. Remove default margin
+*/
+*{
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+}
+/*
+  3. Allow percentage-based heights in the application
+*/
+html, body {
+ height: 100%;
+ width: 100%;
+}
+/*
+  Typographic tweaks!
+  4. Add accessible line-height
+  5. Improve text rendering
+*/
+body {
+  line-height: 1.5;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--primaryDark-900);
+}
+/*
+  6. Improve media defaults
+*/
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+  7. Remove built-in form typography styles
+*/
+input, button, textarea, select {
+  font: inherit;
+}
+/*
+  8. Avoid text overflows
+*/
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+/*
+  9. Create a root stacking context
+*/
+#root, #__next {
+  isolation: isolate;
+}
+/* width and height of the scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+ 
+  
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* background color of the scrollbar */
+::-webkit-scrollbar-track {
+  background-color: var(--primaryDark);
 }
+
+/* color of the scrollbar thumb */
+::-webkit-scrollbar-thumb {
+  background-color:rgb(120, 209, 11) ;
+  border-radius: 15px;
+  
+}
+
+/* Firefox */
+::-moz-range-thumb {
+  border-radius: 15px;
+}
+
+/* Internet Explorer */
+::-ms-thumb {
+  border-radius: 15px;
+}
+
+/* color of the scrollbar thumb on hover */
+::-webkit-scrollbar-thumb:hover {
+  background-color:var( --primaryDark-400);
+}
+
+
+:root {
+  --primary-color: #007bff;
+  
+  --primaryDark-100: #CEE0F3;
+  --primaryDark-200: #91B9E3;
+  --primaryDark-300: #5090D3;
+  --primaryDark-400: #265D97;
+  --primaryDark-500: #1E4976;
+  --primaryDark-600: #173A5E;
+  --primaryDark-700: #132F4C;
+  --primaryDark-800: #001E3C;
+  --primaryDark-900: #0A1929;
+  --primaryDark-main: #5090D3;
+  --primaryDark-mainChannel: 80 144 211;
+  --background-default: #001E3C;
+  --background-paper: #0A1929;
+  --background-defaultChannel: 0 30 60;
+  --black: #1D1D1D;
+  --white: #fff;
+  --background: #000;
+  --onBackground: #fff;
+  --backgroundChannel: 0 0 0;
+  --onBackgroundChannel: 255 255 255;
+  --primary: #fff;
+  --secondary: #B2BAC2;
+  --disabled: rgba(255, 255, 255, 0.5);
+  --icon: rgba(255, 255, 255, 0.5);
+  --primaryChannel: 255 255 255;
+  --secondaryChannel: 178 186 194;
+  --grey-50: #F3F6F9;
+  --grey-100: #E7EBF0;
+  --grey-200: #E0E3E7;
+  --grey-300: #CDD2D7;
+  --primaryDark-50: #E2EDF8;
+--grey-400: #B2BAC2;
+--grey-500: #A0AAB4;
+--grey-600: #6F7E8C;
+--grey-700: #3E5060;
+--grey-800: #2D3843;
+--grey-900: #1A2027;
+--grey-main: #132F4C;
+--grey-contrastText: #6F7E8C;
+--grey-A100: #f5f5f5;
+--grey-A200: #eeeeee;
+--grey-A400: #bdbdbd;
+
+}
+
