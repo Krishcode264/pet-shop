@@ -4,15 +4,22 @@ import NavBar from '../componants/navbar/NavBar'
 import PetCard from '../componants/petcards/PetCard'
 import PetCardTemplate from '../componants/petcardtemplate/PetCardTemplate'
 import PetTemplate from '../componants/petcards/PetTemplate'
+import { signOut } from 'firebase/auth'
+import Firebase ,{auth} from '../componants/helpanime/Firebase'
 import './Home.css'
-import Onloadpetcard from '../componants/helpanime/Onloadpetcard'
+import LoadAnimate from '../componants/helpanime/LoadAnimate'
+import UserProfile from '../componants/userpage/UserProfile'
 const Home = () => {
+
   return (
     <>
 
       <NavBar/>
-      <div className='space_create'></div>
+     
+      <div className='space_create'>    </div>
+   
     <Tag/>
+
     <div>
     <PetCardTemplate tag='Dog' />
     <PetCardTemplate tag='Cat'/>

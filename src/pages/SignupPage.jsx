@@ -1,42 +1,42 @@
 import React from 'react'
 import doglogo from '../photos/cute-dog-puppy-public-domain.webp'
 import { Link } from 'react-router-dom'
-import { useState } from 'react'
+import { useState ,useEffect} from 'react'
 import { useRef } from 'react'
 import {
-  getAuth,createUserWithEmailAndPassword
+  createUserWithEmailAndPassword
 } from 'firebase/auth'
-import { initializeApp } from 'firebase/app'
-
+import {auth} from  '../componants/helpanime/Firebase'
+import { useContext } from 'react'
+import { myContext } from '../componants/helpanime/Context'
+import { onAuthStateChanged } from 'firebase/auth'
+import { useNavigate } from 'react-router-dom'
 const SignupPage = () => {
 
-  const firebaseConfig = {
-    apiKey: "AIzaSyCqSaV1bs0bcz_Xv5aYElCQo82x5eGX1HQ",
-    authDomain: "my-first-firebase-projec-82a5d.firebaseapp.com",
-    projectId: "my-first-firebase-projec-82a5d",
-    storageBucket: "my-first-firebase-projec-82a5d.appspot.com",
-    messagingSenderId: "927476580212",
-    appId: "1:927476580212:web:8e59c27596c84a3f987621",
-    measurementId: "G-ERY4M7PPSP"
-  };
+  const {isAuthenticated,setIsAuthenticated}=useContext(myContext);
+const {isLoggedin,setIsLoggedin}=useContext(myContext);
 
-
-  initializeApp(firebaseConfig);
-
-
-
-
-  const auth =getAuth();
 const [email,setEmail]=useState('');
 const [password,setPassword]=useState('');
 
+const navigate=useNavigate();
+
+
+
+
+
 const handleUserSignup=(e)=>{
+
 e.preventDefault();
 createUserWithEmailAndPassword(auth,email,password)
 .then((cred)=>{
   console.log("user created",cred.user);
+ 
   setEmail('');
   setPassword('')
+  setIsLoggedin(true);
+  navigate('/');
+  
 })
 .catch((err)=>{
   console.log(err.message);
@@ -53,6 +53,7 @@ const handleEmailChange=(e)=>{
 
   return (
     <div className='login_div'>
+
     <img src={doglogo} alt="" className='back_dog_photo' />
 
 
@@ -60,7 +61,7 @@ const handleEmailChange=(e)=>{
 
         <div className="shape"></div>
         
-        <form  className='bright_onhover' onSubmit={handleUserSignup}>
+        <form  className='bright_onhover formm' onSubmit={handleUserSignup}>
         <h3>Signup here</h3>
 
         <label htmlFor="email">Email</label>
@@ -81,7 +82,7 @@ const handleEmailChange=(e)=>{
 
       
         
-        <button type='submit'>    Signup
+        <button type='submit' className='btn_text'>    Signup
        </button>
        
     

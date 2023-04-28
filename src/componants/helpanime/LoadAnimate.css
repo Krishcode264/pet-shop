@@ -1,0 +1,70 @@
+.load_circle{
+     height: 100px;
+     width: 200px;
+    position: absolute;
+          top: 100px;
+          left: 90px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+
+    
+}
+.child{
+margin-right: 16px;
+height: 20px;
+width: 20px;
+border-radius: 50%;
+background-color: #eae4e4;
+}
+
+.load_circle .one{
+     animation: changeposition_one 1s linear infinite;
+}
+.load_circle .two{
+    animation: changeposition_two 1.4s  linear infinite;
+}
+.load_circle .three{
+    animation: changeposition_three 1.8s linear infinite;
+}
+@keyframes changeposition_one{
+    
+
+  0%,50%,100%{
+  transform: translateY(-30px);
+  }
+  25%,75%{
+    transform: translateY(10px);
+  }
+     
+
+
+}
+
+@keyframes changeposition_two{
+    
+
+    0%,50%,100%{
+    transform: translateY(-20px);
+    }
+    25%,75%{
+      transform: translateY(20px);
+    }
+       
+  
+  
+  }
+
+  @keyframes changeposition_three{
+    
+
+    0%,50%,100%{
+    transform: translateY(-30px);
+    }
+    25%,75%{
+      transform: translateY(10px);
+    }
+       
+  
+  
+  }

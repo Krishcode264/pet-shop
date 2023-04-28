@@ -27,7 +27,15 @@
   width: 40%;
 
     justify-content:flex-end;
+    align-items: center;
   
   }
+  .auth_btns * :hover{
+    cursor: pointer;
+  }
 
- 
+ .wishlist_icon{
+  margin-right: 20px;
+   color: red;
+   font-size: 40px !important;
+ }

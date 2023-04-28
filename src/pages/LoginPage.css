@@ -9,11 +9,11 @@
 
 .back_dog_photo{
 width: 100%;
-height: auto;
+height: 100vh;
 display: block;
-aspect-ratio: contain;
-filter: brightness(0.19);
 object-fit: cover;
+filter: brightness(0.3);
+z-index: -2;
 }
 .background{
     width: 430px;
@@ -63,7 +63,7 @@ object-fit: cover;
     bottom: -80px;
     z-index: -2;
 }
-form{
+.formm{
     height: 540px;
     width: 400px;
     background-color: rgba(255,255,255,0.13);
@@ -77,14 +77,14 @@ form{
     box-shadow: 0 0 40px rgba(8,7,16,0.6);
     padding: 50px 35px;
 }
-form *{
+.formm *{
     font-family: 'Poppins',sans-serif;
     color: #ffffff;
     letter-spacing: 0.5px;
     outline: none;
     border: none;
 }
-form h3{
+.formm h3{
     font-size: 32px;
     font-weight: 500;
     line-height: 42px;
@@ -150,4 +150,7 @@ button{
 
 .click_to_navigate:hover{
 color: #ff512f;
+}
+.btn_text{
+    color: #080710;
 }

@@ -1,0 +1,40 @@
+
+
+.user_profile_{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: 400px;
+    position: absolute;
+    right: 0;
+     top: 80px;
+    z-index: 999;
+    align-items: center;
+    border-radius: 20px;
+      animation: slidUsercard 0.5s   forwards ;
+    background-color: rgba(8, 8, 8, 0.893);
+}
+
+
+@keyframes slidUsercard {
+    
+    0%{
+        transform: translate(200px);
+       
+    }
+    100%{
+        transform: translate(0px );
+      
+    }
+}
+.user_profile_icon{
+    margin: 20px 0px 10px 0px;
+    
+
+}
+.user_profile_ h3{
+    color: rgb(47, 135, 231);
+}
+
+
+    

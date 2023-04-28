@@ -1,18 +1,29 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './App.css'
 import PetTemplate from './componants/petcards/PetTemplate'
 import { BrowserRouter as Router,Routes,Route, json } from 'react-router-dom'
 import LoginPage from './pages/LoginPage'
 import Home from './pages/Home'
-import LikedPets from './pages/LikedPets'
+import LikedPets from './pages/LikedPets';
+import { myContext } from './componants/helpanime/Context'
 import SignupPage from './pages/SignupPage'
-import HotstarNav from './componants/test_react/HotstarNav'
-import Onloadpetcard from './componants/helpanime/Onloadpetcard'
-function App() {
-  
 
+function App() {
+  const[isLoading,setisLoading]=useState(false)
+   const [isLoggedin,setIsLoggedin]=useState(false);
+   const [isProfileHovered,setIsProfileHovered]=useState(false);
   return (
+
     <Router>
+      <myContext.Provider value={{
+        isLoggedin,
+        setIsLoggedin,
+        isProfileHovered,
+        setIsProfileHovered,
+         isLoading,
+         setisLoading
+        
+        }}>
     <div className="App">
    
  
@@ -27,9 +38,10 @@ function App() {
   
 
     <Route path="/login" element={<LoginPage/>}/> 
-    <Route path="/onload" element={<Onloadpetcard/>}/> 
+
     </Routes>
     </div>
+    </myContext.Provider>
     </Router>
 
   )
