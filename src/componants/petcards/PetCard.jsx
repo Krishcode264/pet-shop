@@ -28,10 +28,10 @@ const PetCard = ({id,name,price,gender,petphoto}) => {
               <FavoriteIcon sx={{ fontSize: 28 }}  className="unliked_icon"   onClick={(e)=>{}}/>
             </div>
             <span className="pet_price">
-              Price:<span className="pet_pricenum">${price}</span>
+              Price:<span className="pet_pricenum">₹{price}</span>
             </span>
           </div>
-          <button className="addto_wish" onClick={(e)=>{}}>Add to wishlist</button>
+          <button className="addto_wish" onClick={(e)=>{}}>Add to Cart</button>
         </div>
       </div>
     </>

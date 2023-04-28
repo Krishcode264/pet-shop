@@ -8,7 +8,7 @@ padding: 8px;
 width: 30%;
 height: 20%;
 margin: 0px 18px;
-filter: brightness(0.7);
+filter: brightness(1);
 
 }
 .pet_image {
@@ -20,6 +20,8 @@ filter: brightness(0.7);
 transform:scale(1.1,1.1);
 box-shadow:5px 19px 15px black;
 filter: brightness(1);
+cursor: pointer;
+
 
 }
 
@@ -76,8 +78,8 @@ transform: scale(1.2);
 
 
 .addto_wish{
-  border-radius: 8px;
-  background-color: rgb(146, 146, 16);
+  border-radius: 4px;
+  background-color: rgba(216, 210, 210, 0.548);
   height:fit-content;
   font-size: 18px;
   padding: 4px;
@@ -86,7 +88,7 @@ transform: scale(1.2);
 
 }
 .addto_wish:hover{
-  background-color: yellow;
+  background-color: rgb(228, 214, 193);
 }
 
 
