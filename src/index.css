@@ -67,7 +67,7 @@ p, h1, h2, h3, h4, h5, h6 {
 
 /* color of the scrollbar thumb */
 ::-webkit-scrollbar-thumb {
-  background-color:rgb(120, 209, 11) ;
+  background-color:rgb(86, 109, 128) ;
   border-radius: 15px;
   
 }

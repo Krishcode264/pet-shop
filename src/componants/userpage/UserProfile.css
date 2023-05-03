@@ -1,5 +1,8 @@
 
-
+.user_name{
+    color: aliceblue;
+    margin: 4px;
+}
 .user_profile_{
     display: flex;
     flex-direction: column;
@@ -11,7 +14,7 @@
     z-index: 999;
     align-items: center;
     border-radius: 20px;
-      animation: slidUsercard 0.5s   forwards ;
+      animation: slidUsercard 0.5s   alternate;
     background-color: rgba(8, 8, 8, 0.893);
 }
 
@@ -27,14 +30,17 @@
       
     }
 }
-.user_profile_icon{
-    margin: 20px 0px 10px 0px;
-    
 
-}
 .user_profile_ h3{
     color: rgb(47, 135, 231);
+   
 }
 
+.place_below{
+    margin-top: 20px;
+}
 
+.user_profile_icon{
+    margin-top: 12px !important;
+}
     
