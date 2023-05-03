@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import { useState ,useEffect} from 'react'
 import { useRef } from 'react'
 import {
-  createUserWithEmailAndPassword
+  createUserWithEmailAndPassword, updateProfile
 } from 'firebase/auth'
 import {auth} from  '../componants/helpanime/Firebase'
 import { useContext } from 'react'
@@ -14,29 +14,30 @@ import { useNavigate } from 'react-router-dom'
 const SignupPage = () => {
 
   const {isAuthenticated,setIsAuthenticated}=useContext(myContext);
-const {isLoggedin,setIsLoggedin}=useContext(myContext);
+const {isLoggedin,setIsLoggedin,setName}=useContext(myContext);
 
 const [email,setEmail]=useState('');
 const [password,setPassword]=useState('');
-
+const [inputName,setInputName]=useState('');
 const navigate=useNavigate();
 
 
 
 
 
-const handleUserSignup=(e)=>{
+const  handleUserSignup=(e)=>{
 
 e.preventDefault();
-createUserWithEmailAndPassword(auth,email,password)
+const {user}=createUserWithEmailAndPassword(auth,email,password)
 .then((cred)=>{
-  console.log("user created",cred.user);
- 
+  console.log("user created",cred.user.email);
+
+}).then(()=>{
   setEmail('');
   setPassword('')
+  setName('')
   setIsLoggedin(true);
   navigate('/');
-  
 })
 .catch((err)=>{
   console.log(err.message);
@@ -49,6 +50,9 @@ const handleEmailChange=(e)=>{
   }
   const handlePasswordChange=(e)=>{
     setPassword(e.target.value);
+    }
+    const handleNameChange=(e)=>{
+      setInputName(e.target.value)
     }
 
   return (
@@ -63,6 +67,16 @@ const handleEmailChange=(e)=>{
         
         <form  className='bright_onhover formm' onSubmit={handleUserSignup}>
         <h3>Signup here</h3>
+        <label htmlFor="name">Your Name</label>
+        <input type="text"
+         placeholder="Enter your name " 
+         name='name' 
+         id="name" 
+         className='new_input'
+         value={inputName}
+         onChange={handleNameChange}
+         required
+         />
 
         <label htmlFor="email">Email</label>
         <input type="text"

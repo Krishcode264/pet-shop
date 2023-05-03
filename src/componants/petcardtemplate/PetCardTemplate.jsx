@@ -1,34 +1,39 @@
 import React from 'react'
 import './PetCardTemplate.css'
 import PetCard from '../petcards/PetCard'
+import { useContext } from 'react'
+import { myContext } from '../helpanime/Context'
 import { useState ,useEffect} from 'react'
 const PetCardTemplate = ({tag}) => {
   
-  const [filteredPets, setFilteredPets] = useState([]);
+
 
     const[fetched,setfetched]=useState(false)
-    
-
+    const [filteredPets,setFilteredPets]=useState([]);
+       const {pets,setPets}=useContext(myContext);
     useEffect(() => {
-      fetch('http://localhost:8000/pets')
+      fetch('http://localhost:8001/pets')
         .then((res) => res.json() )
         .then((data) => {
-          console.log(data)
-          const filtered = data.filter(pet => pet.tags.includes(`#${tag.toLowerCase()}`));
+        
+         
+           
+         const filtered = data.filter(pet => pet.tags.includes(`#${tag.toLowerCase()}`));
           setFilteredPets(filtered);
         })
         .catch((err) => console.log(err));
     }, [tag]);
-
+   
     const renderPetCards = () => {
       return filteredPets.map(pet => (
         <PetCard
           key={pet.id}
           id={pet.id}
-          name={pet.name}
+          name={pet.breed}
           price={pet.price}
           gender={pet.gender}
           petphoto={pet.pet_url}
+          pet={pet}
         />
       ));
     };

@@ -8,6 +8,7 @@ import { useContext } from 'react'
 import { Avatar } from '@mui/material'
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import UserProfile from '../userpage/UserProfile'
+import { Link } from 'react-router-dom'
 const NavBar = () => {
 
   const {isLoggedin,setIsLoggedin,isProfileHovered,setIsProfileHovered}=useContext(myContext);
@@ -23,13 +24,15 @@ const NavBar = () => {
         </div>
         <div className='auth_btns'> 
         {!isLoggedin ? (
-          <>
+          <>    
+          
+<Link to='/liked'> <FavoriteIcon title='check your wishlist' className='wishlist_icon'/></Link>     
            <SignUp content="login" route="/login" />
            <SignUp content="Signup" route="/signup" />
           </>
         ):(
           <>
-           <FavoriteIcon title='check your wishlist' className='wishlist_icon'/>
+
           <Avatar className='user_profile' onClick={HandleUsercard} />
           </>
         )

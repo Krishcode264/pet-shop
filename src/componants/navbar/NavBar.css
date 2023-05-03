@@ -3,6 +3,7 @@
     align-items: center;
     justify-content: flex-start;
     width: 60%;
+    /* border: 1px solid green; */
   
 
   }
@@ -10,6 +11,7 @@
   .main_nav{
     display: flex;
     justify-content: space-between;
+    align-items: center;
     background-color:var(--primaryDark-800);
     padding: 13px;
     border-radius: 8px;
@@ -19,15 +21,17 @@
     width: 100%;
     padding: 14px;
     z-index: 1;
-   
+     /* border: 1px solid red; */
     
   }
   .auth_btns{
-    display: flex;
-  width: 40%;
-
-    justify-content:flex-end;
-    align-items: center;
+ 
+      width: 40%;
+      /* border: 1px solid blue; */
+      display: flex;
+      justify-content: flex-end;
+  
+        
   
   }
   .auth_btns * :hover{

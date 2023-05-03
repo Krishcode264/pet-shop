@@ -1,12 +1,15 @@
 import React from 'react'
 import './Search.css'
 import SearchIcon from '@mui/icons-material/Search';
+import { Link } from 'react-router-dom';
 const Search = () => {
   return (
-    <div  className='input_parent'>
+     
+   <Link to='/search'> 
+   <div  className='input_parent'>
 <SearchIcon className='searchicon'/>
-      <input type="text"className='searchinput' />
-    </div>
+      <div className='searchinput' />
+    </div></Link> 
   )
 }
 

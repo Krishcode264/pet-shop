@@ -1,0 +1,23 @@
+.liked_pets{
+   color: white;
+   text-align: center;
+   margin: 18px;
+   font-size: 25px;
+}
+.liked_pet_grid{
+   
+  width: 100%;
+ 
+    display: grid;
+    grid-gap: 1em;
+    grid-row-gap:50px ;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns of equal size */
+ 
+      
+
+}
+.pet_not_found{
+    color: white;
+    margin: 20px ;
+    display: block;
+}
