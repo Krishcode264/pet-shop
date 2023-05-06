@@ -7,7 +7,8 @@ import { signOut } from 'firebase/auth'
 import { myContext } from '../helpanime/Context'
 import { useContext } from 'react'
 const UserProfile = () => {
-   const{isLoggedin , setIsLoggedin,isProfileHovered,setIsProfileHovered,userEmail,user}=useContext(myContext);
+   const{isLoggedin , setIsLoggedin,isProfileHovered,setIsProfileHovered,userEmail,user,userName}=useContext(myContext);
+
     const HandleLogout=()=>{
         console.log('hello')
         
@@ -23,7 +24,7 @@ const UserProfile = () => {
   return (
     <div className={` user_profile_  `}>
       <Avatar className='user_profile_icon'/>
-    {user ? ( <h2 className='user_name'>{user.displayname}</h2>) : null }
+     <h2 className='user_name'>{user.displayName}</h2>
       <h3>{user.email}</h3>
     
                 <div className="logout place_below">

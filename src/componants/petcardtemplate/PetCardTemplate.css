@@ -116,18 +116,29 @@
 
 
 .loading_animate{
-  color: rgba(90, 139, 88, 0.646);
-  animation:loading 0.7s linear infinite;
+  color: rgba(190, 199, 190, 0.646);
+  
+}
+.loading_dots{
+  
+  animation:loading 0.5s linear infinite;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+ 
 
 }
 @keyframes loading {
   50%{
 
-    color: #29e51b;
+    color: #adbaac;
+  }
+  30%{
+    color: rgb(145, 255, 0);
   }
   100%{
 
-    color: #28e51bf6;
+    color: #0b21c8e2;
   }
   
 }

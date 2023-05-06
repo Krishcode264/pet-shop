@@ -72,9 +72,9 @@ const handlePasswordchange=(e)=>{
        <h5 className='navigate_to_login'>New user  <Link to='/signup' className='click_to_navigate'>click here </Link> to signup </h5> 
 
         <div className="social">
-          <a  href="https://www.google.co.in/?client=safari">
-            <div className="go"><i className="fab fa-google"></i>  Google</div></a>
-          <div className="fb"><i className="fab fa-facebook"></i>  Facebook</div>
+
+            <div className="go"> Google</div>
+          <div className="fb"> Facebook</div>
         </div>
 
     </form>

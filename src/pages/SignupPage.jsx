@@ -14,7 +14,7 @@ import { useNavigate } from 'react-router-dom'
 const SignupPage = () => {
 
   const {isAuthenticated,setIsAuthenticated}=useContext(myContext);
-const {isLoggedin,setIsLoggedin,setName}=useContext(myContext);
+const {isLoggedin,setIsLoggedin}=useContext(myContext);
 
 const [email,setEmail]=useState('');
 const [password,setPassword]=useState('');
@@ -28,20 +28,27 @@ const navigate=useNavigate();
 const  handleUserSignup=(e)=>{
 
 e.preventDefault();
-const {user}=createUserWithEmailAndPassword(auth,email,password)
-.then((cred)=>{
-  console.log("user created",cred.user.email);
+createUserWithEmailAndPassword(auth, email, password)
+.then((cred) => {
+  console.log("User created", cred.user.email);
 
-}).then(()=>{
-  setEmail('');
-  setPassword('')
-  setName('')
-  setIsLoggedin(true);
-  navigate('/');
+  updateProfile(cred.user, {
+    displayName: inputName
+  })
+    .then(() => {
+      setEmail("");
+      setPassword("");
+      setIsLoggedin(true);
+      navigate("/");
+     console.log(cred.user.displayName)
+    })
+    .catch((err) => {
+      console.log(err.message);
+    });
 })
-.catch((err)=>{
+.catch((err) => {
   console.log(err.message);
-})
+});
 }
 
 
@@ -102,9 +109,9 @@ const handleEmailChange=(e)=>{
     
        <h5 className='navigate_to_login'>Already customer <Link to='/login' className='click_to_navigate'>click here </Link> to login </h5> 
         <div className="social">
-          <a  href="https://www.google.co.in/?client=safari">
-            <div className="go"><i className="fab fa-google"></i>  Google</div></a>
-          <div className="fb"><i className="fab fa-facebook"></i>  Facebook</div>
+      
+            <div className="go"> Google</div>
+          <div className="fb"> Facebook</div>
         </div>
 
     </form>

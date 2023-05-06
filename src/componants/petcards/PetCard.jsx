@@ -59,7 +59,8 @@ const PetCard = ({id,name,price,gender,petphoto,pet}) => {
           />
         </div>
         <div className="per_info">
-          <h4 className="pet_name">{name}</h4>
+          <h4 className="pet_name">{pet.name}</h4>
+          <h4 className="pet_breed">{pet.breed}</h4>
           <div className="gender_price_rapper">
             <div className="pet_gender_likes_div">
               <span className="pet_gender">{gender}</span>

@@ -101,7 +101,11 @@ transform: scale(1.2);
      outline: 1px solid red;
      border: 0.3px solid red;
 }
-
+.pet_breed{
+   text-align: center;
+  display: block;
+  color: rgba(9, 130, 236, 0.979);
+}
 
 @media (max-width: 580px) {
 .pet_card{

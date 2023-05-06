@@ -6,13 +6,13 @@
 }
 .liked_pet_grid{
    
-  width: 100%;
- 
+  width: 70%;
     display: grid;
+    margin: 0 auto;
     grid-gap: 1em;
     grid-row-gap:50px ;
     grid-template-columns: repeat(4, 1fr); /* 4 columns of equal size */
- 
+  
       
 
 }
@@ -20,4 +20,42 @@
     color: white;
     margin: 20px ;
     display: block;
+}
+@media (max-width:1200px) {
+  
+ .liked_pet_grid{
+
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+}
+@media (max-width:930px) {
+ .liked_pet_grid{
+ 
+
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
+    margin: 10px auto;
+  }
+
+}
+@media (max-width:810px) {
+ .liked_pet_grid{
+ 
+
+    grid-template-columns: 1fr  1fr;
+    grid-gap: 5px;
+    margin: 10px auto;
+  }
+
+}
+@media (max-width:580px) {
+ .liked_pet_grid{
+ 
+
+    grid-template-columns:  1fr;
+    grid-gap: 5px;
+    margin: 10px auto;
+  }
+
 }

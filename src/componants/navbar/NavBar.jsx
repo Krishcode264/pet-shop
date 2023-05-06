@@ -25,14 +25,14 @@ const NavBar = () => {
         <div className='auth_btns'> 
         {!isLoggedin ? (
           <>    
-          
-<Link to='/liked'> <FavoriteIcon title='check your wishlist' className='wishlist_icon'/></Link>     
+     
            <SignUp content="login" route="/login" />
            <SignUp content="Signup" route="/signup" />
           </>
         ):(
           <>
-
+          
+          <Link to='/liked'> <FavoriteIcon title='check your wishlist' className='wishlist_icon'/></Link>
           <Avatar className='user_profile' onClick={HandleUsercard} />
           </>
         )

@@ -127,6 +127,7 @@ label{
 .social{
   margin-top: 30px;
   display: flex;
+  justify-content: space-around;
 }
 .social div {
   background: red;
@@ -137,17 +138,13 @@ label{
   color: #eaf0fb;
   text-align: center;
 }
-.social .fb:hover{
+.social .fb:hover , .go:hover {
   background-color: rgba(255,255,255,0.47);
 }
-.social .fb{
-  margin-left: 25px;
-}
-.fa-facebook{
-  margin-right: 4px;
-}
+
+
 .navigate_to_login{
-    padding-top: 12px;
+    padding-top: 30px;
 }
 
 .click_to_navigate:hover{

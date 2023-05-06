@@ -50,7 +50,7 @@ const PetCardTemplate = ({tag}) => {
       {filteredPets.length ? (
         renderPetCards()
       ) : (
-        <h3 className='loading_animate'>pet cards are being rendered...</h3>
+        <h3 className='loading_animate'>pet cards are being rendered<span className='loading_dots'>...</span></h3>
       )}   
 
       
