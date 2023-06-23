@@ -16,10 +16,15 @@
       
 
 }
+
+.no_grid{
+  color:white;
+  padding: 23px;
+}
 .pet_not_found{
-    color: white;
+    color: rgb(191, 209, 211);
     margin: 20px ;
-    display: block;
+    
 }
 @media (max-width:1200px) {
   

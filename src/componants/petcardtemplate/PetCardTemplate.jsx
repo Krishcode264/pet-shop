@@ -1,42 +1,42 @@
 import React from 'react'
 import './PetCardTemplate.css'
 import PetCard from '../petcards/PetCard'
-import { useContext } from 'react'
-import { myContext } from '../helpanime/Context'
-import { useState ,useEffect} from 'react'
+import { useSelector } from 'react-redux/es/hooks/useSelector'
 const PetCardTemplate = ({tag}) => {
   
+let petdata=useSelector((state)=>state.fetchPetDataReducer.pets)
+
+  // {
+  //     "id": "p001",
+  //     "name": "Fluffy",
+  //     "price": 500,
+  //     "image_url": "https://example.com/pet_images/fluffy.jpg",
+  //     "tags": [
+  //       "#cute",
+  //       "#fluffy",
+  //       "#happy"
+  //     ],
 
 
-    const[fetched,setfetched]=useState(false)
-    const [filteredPets,setFilteredPets]=useState([]);
-       const {pets,setPets}=useContext(myContext);
-    useEffect(() => {
-      fetch('http://localhost:8001/pets')
-        .then((res) => res.json() )
-        .then((data) => {
-        
-         
-           
-         const filtered = data.filter(pet => pet.tags.includes(`#${tag.toLowerCase()}`));
-          setFilteredPets(filtered);
-        })
-        .catch((err) => console.log(err));
-    }, [tag]);
-   
+
+
     const renderPetCards = () => {
-      return filteredPets.map(pet => (
+      let filterPets=petdata.filter((petobj)=>petobj.tags.includes(`#${tag.toLowerCase()}`))
+    
+      return filterPets.map(pet => (
         <PetCard
           key={pet.id}
           id={pet.id}
-          name={pet.breed}
+          name={pet.name}
+          breed={pet.breed}
           price={pet.price}
           gender={pet.gender}
           petphoto={pet.pet_url}
-          pet={pet}
+          isLiked={pet.isLiked}
         />
       ));
     };
+
         
 
   return (
@@ -47,8 +47,8 @@ const PetCardTemplate = ({tag}) => {
       <div className="pet_card_grid">
     
 
-      {filteredPets.length ? (
-        renderPetCards()
+      {petdata.length ? (
+      renderPetCards()
       ) : (
         <h3 className='loading_animate'>pet cards are being rendered<span className='loading_dots'>...</span></h3>
       )}   

@@ -3,18 +3,19 @@ import './NavBar.css'
 import TopNav from './TopNav'
 import SignUp from './SignUp'
 import Search from './Search'
-import { myContext   }     from '../helpanime/Context'
-import { useContext } from 'react'
 import { Avatar } from '@mui/material'
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import UserProfile from '../userpage/UserProfile'
+import { setUser } from '../../store/petDataSlice'
 import { Link } from 'react-router-dom'
+import { handleOppositeAction } from '../../store/petDataSlice'
+import { useDispatch, useSelector } from 'react-redux'
 const NavBar = () => {
 
-  const {isLoggedin,setIsLoggedin,isProfileHovered,setIsProfileHovered}=useContext(myContext);
-
+ const dispatch=useDispatch()
+ const profileStates=useSelector((state)=>state.userReducer)
   const HandleUsercard=()=>{
-             setIsProfileHovered(!isProfileHovered);
+             dispatch(handleOppositeAction())
   }
   return (
     <div className="main_nav">
@@ -23,7 +24,7 @@ const NavBar = () => {
       <Search/>
         </div>
         <div className='auth_btns'> 
-        {!isLoggedin ? (
+        {!profileStates.user.islogged ? (
           <>    
      
            <SignUp content="login" route="/login" />
@@ -41,7 +42,7 @@ const NavBar = () => {
       
       </div>
 
-           { isProfileHovered ? (<UserProfile/>) : null}
+           { profileStates.profileCard.showProfile? (<UserProfile/>) : null}
       
       </div>
   )

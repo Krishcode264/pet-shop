@@ -4,18 +4,22 @@ import './UserProfile.css'
 import SignUp from '../navbar/SignUp'
 import { auth } from '../helpanime/Firebase'
 import { signOut } from 'firebase/auth'
-import { myContext } from '../helpanime/Context'
-import { useContext } from 'react'
+import { useDispatch } from 'react-redux'
+import { setUser } from '../../store/petDataSlice'
+import {  useSelector } from 'react-redux/es/hooks/useSelector'
 const UserProfile = () => {
-   const{isLoggedin , setIsLoggedin,isProfileHovered,setIsProfileHovered,userEmail,user,userName}=useContext(myContext);
-
+ const dispatch=useDispatch();
+  const user=useSelector(state=>state.userReducer.user)
     const HandleLogout=()=>{
         console.log('hello')
         
         signOut(auth).then(()=>{
             console.log('sign out successful');
-              setIsLoggedin(false);
-              setIsProfileHovered(false)
+             dispatch(setUser({
+              name:"",
+              email:"",
+              islogged:false
+             }))
               
          }).catch((err)=>{
             console.log(err);
@@ -23,16 +27,18 @@ const UserProfile = () => {
     }
   return (
     <div className={` user_profile_  `}>
-      <Avatar className='user_profile_icon'/>
-     <h2 className='user_name'>{user.displayName}</h2>
-      <h3>{user.email}</h3>
-    
-                <div className="logout place_below">
-                    <SignUp content='log out' type='submit' onClick={HandleLogout} />
-                </div>
-            
+      <Avatar className="user_profile_icon" />
+            <>
+          <h2 className="user_name">{user.name}</h2>
+          <h3>{user.email}</h3>
+
+          <div className="logout place_below">
+            <SignUp content="log out" type="submit" onClick={HandleLogout} />
+          </div>
+        </>
+      
     </div>
-  )
+  );
 }
 
 export default UserProfile

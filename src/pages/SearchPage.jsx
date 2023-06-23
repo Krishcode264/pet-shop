@@ -1,75 +1,91 @@
-import React, { useContext, useEffect, useState } from 'react'
-import Search from '../componants/navbar/Search'
-import { Form } from 'react-router-dom'
-import './SearchPage.css'
-import { myContext } from '../componants/helpanime/Context'
-import PetCard from '../componants/petcards/PetCard'
+import React, { useEffect, useState } from "react";
+import { UseSelector, useSelector } from "react-redux/es/hooks/useSelector";
+import "./SearchPage.css";
+import { useReducer } from "react";
+import { updateFilterPets } from "../store/petDataSlice";
+import PetCard from "../componants/petcards/PetCard";
+import { useDispatch } from "react-redux";
+import { fetchPetDataReducer } from "../store/petDataSlice";
 const SearchPage = () => {
-  const{pets,setPets}=useContext(myContext);
-  const [value,setvalue]=useState('');
- 
- const[filterSetter,setFilterSetter]=useState([])
+  const searchInfo = useSelector((state) => state.updateFilterPetReducer);
+  let petdata = useSelector((state) => state.fetchPetDataReducer.pets);
 
-  const handleinputChange=(e)=>{
-setvalue(e.target.value)
+  const dispatch = useDispatch();
 
-  }
- let filterSetteradd;
+  // {
+  //   "id": "p001",
+  //   "name": "Fluffy",
+  //   "price": 500,
+  //   "image_url": "https://example.com/pet_images/fluffy.jpg",
+  //   "tags": [
+  //     "#cute",
+  //     "#fluffy",
+  //     "#happy"
+  //   ],
+  //   "owner": {
+  //     "name": "John Smith",
+  //     "address": "123 Main St, Anytown USA"
+  //   },
+  //   "gender": "female",
+  //   "breed": "Persian cat",
+  //   "age": 2
+  // },
+  let filterpets = [];
 
-  useEffect(()=>{
-    console.log(pets)
-   filterSetteradd=pets.filter((pet)=>{
-      const normalizedTags=pet.tags.map((tag)=> tag.toLowerCase().replace('#',''));
-        return(
-          pet.name.toLowerCase().includes(value.toLowerCase()) ||
-          pet.breed.toLowerCase().includes(value.toLowerCase()) ||
-          normalizedTags.includes(value) ||
-          pet.name.toLowerCase().indexOf(value) !== -1 ||
-          pet.breed.toLowerCase().indexOf(value) !== -1 ||
-          pet.gender.toLowerCase().includes(value.toLowerCase()) ||
-          pet.gender.toLowerCase().indexOf(value) !==-1 ||
-          normalizedTags.some((tag)=> tag.indexOf(value) !== -1)
-        );
-      
-      
-      
-      })
-      setFilterSetter(filterSetteradd);
-    
+  const handleInputChange = async (e) => {
+    let value = e.target.value.toLowerCase();
+    console.log(value);
+    if (value === "") {
+      filterpets = [];
+    } else {
+      filterpets = await petdata.filter(
+        (pet) =>
+          pet.name
+            .toLowerCase()
+            .split(" ")
+            .some((name) => name.startsWith(value)) ||
+          pet.gender.toLowerCase() == value ||
+          pet.breed.toLowerCase().split(" ").includes(value) ||
+          pet.tags.some((tag) => tag.startsWith(`#${value}`))
+      );
+    }
 
-  },[value])
-
-
-
-
+    dispatch(updateFilterPets(filterpets));
+  };
 
   return (
-    <div className='search_page_wrapper'>
-        
-       <input  type='text'  className="search_bar" placeholder='Search'value={value} onChange={handleinputChange} >
- 
-      
+    <div className="search_page_wrapper">
+      <input
+        type="text"
+        className="search_bar"
+        placeholder="Search"
+        value={searchInfo.value}
+        onChange={handleInputChange}
+      ></input>
 
-       </input>
-
-
-       <div className="filtered_pet_wrapper">
-        {
-          filterSetter ? (
-filterSetter.map((pet=>{
-  
-  return(
-    <PetCard name={pet.name} price={pet.price} id={pet.id} gender={pet.gender}  pet={pet}/>
-  )
-}))
-
-          ) : (
-              <h4>NO pets found ...</h4>
-          )
-        }
-       </div>
+      <div className="filtered_pet_wrapper">
+        {searchInfo.filterPets.length > 0 ? (
+          searchInfo.filterPets.map((pet) => {
+            return (
+              <PetCard
+                name={pet.name}
+                price={pet.price}
+                id={pet.id}
+                key={pet.id}
+                gender={pet.gender}
+                breed={pet.breed}
+                isLiked={pet.isLiked}
+              />
+            );
+          })
+        ) : (
+          <h4 style={{ color: "white", marginTop: "32px" }}>
+            NO match found ...
+          </h4>
+        )}
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default SearchPage
+export default SearchPage;
