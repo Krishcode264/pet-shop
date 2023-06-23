@@ -13,7 +13,7 @@ const Home = () => {
 
   return (
     <>
-<p>hi</p>
+
       <NavBar/>
      
       <div className='space_create'>    </div>
