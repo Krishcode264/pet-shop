@@ -35,7 +35,7 @@ function App() {
         dispatch(setPetData(newdata));
       })
       .catch((err) => console.log(err));
-  }, []);
+  } );
 
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged((user) => {
@@ -53,7 +53,7 @@ function App() {
     return () => {
       unsubscribe();
     };
-  }, []);
+  });
 
   return (
     <Router>
