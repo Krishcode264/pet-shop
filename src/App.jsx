@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./App.css";
 import PetTemplate from "./componants/petcards/PetTemplate";
-import { BrowserRouter as Router, Routes, Route, json } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import LoginPage from "./pages/LoginPage";
 import Home from "./pages/Home";
 import LikedPets from "./pages/LikedPets";
