@@ -6,6 +6,7 @@ import { updateFilterPets } from "../store/petDataSlice";
 import PetCard from "../componants/petcards/PetCard";
 import { useDispatch } from "react-redux";
 import { fetchPetDataReducer } from "../store/petDataSlice";
+import SearchItem from "../componants/searchItem";
 const SearchPage = () => {
   const searchInfo = useSelector((state) => state.updateFilterPetReducer);
   let petdata = useSelector((state) => state.fetchPetDataReducer.pets);
@@ -67,7 +68,7 @@ const SearchPage = () => {
         {searchInfo.filterPets.length > 0 ? (
           searchInfo.filterPets.map((pet) => {
             return (
-              <PetCard
+              <SearchItem
                 name={pet.name}
                 price={pet.price}
                 id={pet.id}

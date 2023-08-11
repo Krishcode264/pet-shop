@@ -7,6 +7,7 @@ import { signOut } from 'firebase/auth'
 import { useDispatch } from 'react-redux'
 import { setUser } from '../../store/petDataSlice'
 import {  useSelector } from 'react-redux/es/hooks/useSelector'
+import { handleOppositeAction } from '../../store/petDataSlice'
 const UserProfile = () => {
  const dispatch=useDispatch();
   const user=useSelector(state=>state.userReducer.user)
@@ -15,6 +16,7 @@ const UserProfile = () => {
         
         signOut(auth).then(()=>{
             console.log('sign out successful');
+            dispatch(handleOppositeAction())
              dispatch(setUser({
               name:"",
               email:"",

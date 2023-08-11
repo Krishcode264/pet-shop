@@ -1,26 +1,32 @@
 import React from 'react'
 import './PetTemplate.css'
+import PetCard from './PetCard'
+import store from '../../store/store'
+import { useParams } from 'react-router-dom'
+import { UseSelector, useSelector } from 'react-redux/es/hooks/useSelector'
 import dogphoto from '../../photos/cute-dog-puppy-public-domain.webp'
 const PetTemplate = () => {
-  return (
-    
-         
-<div className="animal_template">
+  const {id}=useParams();
   
-  <div className="animal_photos">
+  let pet = useSelector((state) => state.fetchPetDataReducer.pets).find((pet)=> pet.id===id);
 
-  <img src={dogphoto} alt="" />
+  return (
+    <>
+      {
 
-  </div>
-
-  <div className="animal_info">
-    <h1 className='head'>animal details</h1>
-    
-
-  </div>
-</div>
-    
-  )
+        <PetCard
+         
+          id={pet.id}
+          name={pet.name}
+          breed={pet.breed}
+          price={pet.price}
+          gender={pet.gender}
+          petphoto={pet.pet_url}
+          isLiked={pet.isLiked}
+        />
+      }
+    </>
+  );
 }
 
 export default PetTemplate

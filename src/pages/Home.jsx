@@ -1,14 +1,9 @@
 import React from 'react'
 import Tag from '../componants/tags/Tag'
 import NavBar from '../componants/navbar/NavBar'
-import PetCard from '../componants/petcards/PetCard'
 import PetCardTemplate from '../componants/petcardtemplate/PetCardTemplate'
-import PetTemplate from '../componants/petcards/PetTemplate'
-import { signOut } from 'firebase/auth'
-import Firebase ,{auth} from '../componants/helpanime/Firebase'
 import './Home.css'
-import LoadAnimate from '../componants/helpanime/LoadAnimate'
-import UserProfile from '../componants/userpage/UserProfile'
+
 const Home = () => {
 
   return (

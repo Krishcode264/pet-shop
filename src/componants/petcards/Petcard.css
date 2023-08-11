@@ -1,4 +1,9 @@
 
+.petcard_link{
+ text-decoration: none;
+ color: inherit;
+  
+}
 .pet_card{
 background-color: var(--primaryDark-900);
 border-radius: 16px;
