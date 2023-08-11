@@ -3,7 +3,6 @@ import { initializeApp } from 'firebase/app'
 import { getAuth } from 'firebase/auth'
 
 
-
 const firebaseConfig = {
     apiKey: "AIzaSyCqSaV1bs0bcz_Xv5aYElCQo82x5eGX1HQ",
     authDomain: "my-first-firebase-projec-82a5d.firebaseapp.com",

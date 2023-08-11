@@ -1,6 +1,5 @@
 import React from "react";
 import "./Petcard.css";
-
 import { toggleLike } from "../../store/petDataSlice";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import dogphoto from "../../photos/cute-dog-puppy-public-domain.webp";
