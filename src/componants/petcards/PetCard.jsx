@@ -1,15 +1,15 @@
-import React, { useEffect } from "react";
+import React from "react";
 import "./Petcard.css";
-import { useState } from "react";
+
 import { toggleLike } from "../../store/petDataSlice";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import dogphoto from "../../photos/cute-dog-puppy-public-domain.webp";
-import { useSelector } from "react-redux/es/hooks/useSelector";
+
 import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 const PetCard = ({ id, name,breed, price, gender, petphoto ,isLiked}) => {
   const dispatch = useDispatch();
-  const petdata = useSelector((state) => state.pets);
+
   // i have featched pets in my redux store and renderd it on my home page , i wanna add the like functionality of after liked the liked pets showed show in liked pets page and i wanna chnge color of liked icons i can do all these things just tell me , should i create another state for liked items in my redux store or should i add new property to pet object like liked: true/false    which is better way , i hope i am able to discribe it correctly
 
   const handleLikeClick = (e, id) => {

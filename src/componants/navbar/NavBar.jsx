@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import './NavBar.css'
 import TopNav from './TopNav'
 import SignUp from './SignUp'
@@ -6,7 +6,6 @@ import Search from './Search'
 import { Avatar } from '@mui/material'
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import UserProfile from '../userpage/UserProfile'
-import { setUser } from '../../store/petDataSlice'
 import { Link } from 'react-router-dom'
 import { handleOppositeAction } from '../../store/petDataSlice'
 import { useDispatch, useSelector } from 'react-redux'

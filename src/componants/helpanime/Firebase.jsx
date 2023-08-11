@@ -1,9 +1,7 @@
 
 import { initializeApp } from 'firebase/app'
-import { myContext } from './Context';
-import { useContext } from 'react';
 import { getAuth } from 'firebase/auth'
-import { useEffect } from 'react';
+
 
 
 const firebaseConfig = {

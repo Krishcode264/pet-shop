@@ -1,4 +1,4 @@
-import { Store } from "@reduxjs/toolkit";
+
 import { configureStore } from "@reduxjs/toolkit";
 import { fetchPetDataReducer } from "./petDataSlice";
 import { userReducer } from "./petDataSlice";

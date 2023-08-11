@@ -1,10 +1,9 @@
 import React from 'react'
 import './PetTemplate.css'
 import PetCard from './PetCard'
-import store from '../../store/store'
 import { useParams } from 'react-router-dom'
-import { UseSelector, useSelector } from 'react-redux/es/hooks/useSelector'
-import dogphoto from '../../photos/cute-dog-puppy-public-domain.webp'
+import {  useSelector } from 'react-redux/es/hooks/useSelector'
+
 const PetTemplate = () => {
   const {id}=useParams();
   
