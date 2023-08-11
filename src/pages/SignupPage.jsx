@@ -1,20 +1,19 @@
 import React from 'react'
 import doglogo from '../photos/cute-dog-puppy-public-domain.webp'
 import { Link } from 'react-router-dom'
-import { useState ,useEffect} from 'react'
-import { useRef } from 'react'
+import { useState} from 'react'
+
 import {
   createUserWithEmailAndPassword, updateProfile
 } from 'firebase/auth'
 import {auth} from  '../componants/helpanime/Firebase'
 import { useContext } from 'react'
 import { myContext } from '../componants/helpanime/Context'
-import { onAuthStateChanged } from 'firebase/auth'
+
 import { useNavigate } from 'react-router-dom'
 const SignupPage = () => {
 
-  const {isAuthenticated,setIsAuthenticated}=useContext(myContext);
-const {isLoggedin,setIsLoggedin}=useContext(myContext);
+const {setIsLoggedin}=useContext(myContext);
 
 const [email,setEmail]=useState('');
 const [password,setPassword]=useState('');

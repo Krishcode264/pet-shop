@@ -5,15 +5,15 @@ import doglogo from '../photos/cute-dog-puppy-public-domain.webp'
 import { useState } from 'react'
 import { useContext } from 'react'
 import { myContext } from '../componants/helpanime/Context'
-import Firebase,{auth} from '../componants/helpanime/Firebase'
+import {auth} from '../componants/helpanime/Firebase'
 import {  signInWithEmailAndPassword } from 'firebase/auth'
 import { useNavigate } from 'react-router-dom'
-import LoadAnimate from '../componants/helpanime/LoadAnimate'
+
 const LoginPage = () => {
 
  const navigate = useNavigate();
 
-const {isLoggedin,setIsLoggedin,isLoading,setisLoading}=useContext(myContext);
+const {setIsLoggedin,setisLoading}=useContext(myContext);
 
 
 

@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from "react";
-import { UseSelector, useSelector } from "react-redux/es/hooks/useSelector";
+import React from "react";
+import {  useSelector } from "react-redux/es/hooks/useSelector";
 import "./SearchPage.css";
-import { useReducer } from "react";
+
 import { updateFilterPets } from "../store/petDataSlice";
-import PetCard from "../componants/petcards/PetCard";
+
 import { useDispatch } from "react-redux";
-import { fetchPetDataReducer } from "../store/petDataSlice";
+
 import SearchItem from "../componants/searchItem";
 const SearchPage = () => {
   const searchInfo = useSelector((state) => state.updateFilterPetReducer);
@@ -45,7 +45,7 @@ const SearchPage = () => {
             .toLowerCase()
             .split(" ")
             .some((name) => name.startsWith(value)) ||
-          pet.gender.toLowerCase() == value ||
+          pet.gender.toLowerCase() === value ||
           pet.breed.toLowerCase().split(" ").includes(value) ||
           pet.tags.some((tag) => tag.startsWith(`#${value}`))
       );
