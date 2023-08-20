@@ -18,14 +18,20 @@ const NavBar = () => {
   }
   return (
     <div className="main_nav">
-        <div className="right_nav">
+      <div className="right_nav">
         <TopNav />
-      <Search/>
-        </div>
-        <div className='auth_btns'> 
+        <Search />
+      </div>
+      <div className="auth_btns">
         {!profileStates.user.islogged ? (
           <>    
-     
+               <Link to="/liked">
+      
+            <FavoriteIcon
+              title="check your wishlist"
+              className="wishlist_icon"
+            />
+          </Link>
            <SignUp content="login" route="/login" />
            <SignUp content="Signup" route="/signup" />
           </>
@@ -38,13 +44,12 @@ const NavBar = () => {
         )
 
         }
-      
+  
       </div>
 
-           { profileStates.profileCard.showProfile? (<UserProfile/>) : null}
-      
-      </div>
-  )
+      {profileStates.profileCard.showProfile ? <UserProfile /> : null}
+    </div>
+  );
 }
 
 export default NavBar
