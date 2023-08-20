@@ -2,7 +2,7 @@
 
     padding: 5px;
     border-radius: 4px;
-    background-color: #e31bbbe8;
+    background-color: #1be375b5;
     color:var(--grey-50);
     transition: all 0.3s ease-in-out;
     outline: none;
@@ -20,8 +20,7 @@
    transform: scale(1.1);
  
 }
-.krish{
-    color:#1be375b5}
+
 .searchicon{
     color: white;
 }
