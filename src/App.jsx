@@ -13,8 +13,7 @@ import SearchPage from "./pages/SearchPage";
 import {  setPetData } from "./store/petDataSlice";
 import { setUser } from "./store/petDataSlice";
 import { useDispatch } from "react-redux";
-import connectMongo from "./mongodb/connect";
-
+import petData from './data/db.json'
 function App() {
   const [isLoading, setisLoading] = useState(false);
   const [isLoggedin, setIsLoggedin] = useState(false);
@@ -24,31 +23,15 @@ function App() {
 
   
   // Parse the string back to an array
+const newObj=petData.pets.map((pet)=>{return {...pet,isLiked:false}})
 
 
-  // useEffect(() => {
-  //   // fetch("http://localhost:8001/pets")
-  //   //   .then((res) => res.json())
-  //   //   .then((data) => {
-  //   //     let newdata=data.map((pet)=>{
-  //   //       return {...pet,isLiked:false}
-  //   //     })
-  //   //     dispatch(setPetData(newdata));
-  //   //   })
-  //   //   .catch((err) => console.log(err));
-  // //  connectMongo().then(data=>dispatch(setPetData(data))).catch(err=>console.log(err))
-  // //  connectMongo()
-  // //    .then((data) => {
-  // //      dispatch(setPetData(data));
-  // //    })
-  // //    .catch((error) => {
-  // //      console.error("Error:", error);
-  // //      // Handle error if needed
-  // //    });
+  useEffect(() => {
+  
+    dispatch(setPetData(newObj)); 
 
-
-  //  },[]
-  // );
+   },[dispatch, petData]
+   );
 
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged((user) => {

@@ -15,7 +15,9 @@ const fetchPetDataSLice = createSlice({
       });
     },
     setPetData: (state, action) => {
+  
       state.pets = action.payload;
+
     },
   },
 });
