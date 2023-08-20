@@ -30,7 +30,7 @@ const newObj=petData.pets.map((pet)=>{return {...pet,isLiked:false}})
   
     dispatch(setPetData(newObj)); 
 
-   },[dispatch, petData]
+   },[dispatch, newObj]
    );
 
   useEffect(() => {
