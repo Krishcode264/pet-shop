@@ -56,7 +56,7 @@ const SearchPage = () => {
 
   return (
     <>
-    <button></button>
+ 
       <div className="search_page_wrapper">
         <input
           type="text"
