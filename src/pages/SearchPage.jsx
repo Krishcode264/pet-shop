@@ -55,37 +55,40 @@ const SearchPage = () => {
   };
 
   return (
-    <div className="search_page_wrapper">
-      <input
-        type="text"
-        className="search_bar"
-        placeholder="Search"
-        value={searchInfo.value}
-        onChange={handleInputChange}
-      ></input>
+    <>
+    <button></button>
+      <div className="search_page_wrapper">
+        <input
+          type="text"
+          className="search_bar"
+          placeholder="Search"
+          value={searchInfo.value}
+          onChange={handleInputChange}
+        ></input>
 
-      <div className="filtered_pet_wrapper">
-        {searchInfo.filterPets.length > 0 ? (
-          searchInfo.filterPets.map((pet) => {
-            return (
-              <SearchItem
-                name={pet.name}
-                price={pet.price}
-                id={pet.id}
-                key={pet.id}
-                gender={pet.gender}
-                breed={pet.breed}
-                isLiked={pet.isLiked}
-              />
-            );
-          })
-        ) : (
-          <h4 style={{ color: "white", marginTop: "32px" }}>
-            NO match found ...
-          </h4>
-        )}
+        <div className="filtered_pet_wrapper">
+          {searchInfo.filterPets.length > 0 ? (
+            searchInfo.filterPets.map((pet) => {
+              return (
+                <SearchItem
+                  name={pet.name}
+                  price={pet.price}
+                  id={pet.id}
+                  key={pet.id}
+                  gender={pet.gender}
+                  breed={pet.breed}
+                  isLiked={pet.isLiked}
+                />
+              );
+            })
+          ) : (
+            <h4 style={{ color: "white", marginTop: "32px" }}>
+              NO match found ...
+            </h4>
+          )}
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 

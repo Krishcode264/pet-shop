@@ -23,7 +23,10 @@ const PetTemplate = () => {
           petphoto={pet.pet_url}
           isLiked={pet.isLiked}
         />
+
+
       }
+      
     </>
   );
 }
